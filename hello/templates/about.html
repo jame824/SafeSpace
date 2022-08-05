@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,19 +9,19 @@
     <title>about</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../static/css/about.css"/>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}"/>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <nav>
-                <img src="../static/images/SafeSpace Logo.png"/>
+                <img src="{% static 'images/SafeSpace Logo.png' %}"/>
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Resources</li>
-                    <li>Find Communities</li>
-                    <li>Get Involved</li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'resources' %}">Resources</a></li>
+                    <li><a href="{% url 'community' %}">Find Communities</a></li>
+                    <li><a href="{% url 'getinvolved' %}">Get Involved</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,24 +45,24 @@
             <div class="team">
                 <h2>Our Team</h2>
                     <figure class="item">
-                        <img src="../static/images/james.jpeg">
+                        <img src="{% static 'images/james.jpeg' %}">
                         <figcaption class="james">James Fu</figcaption>
                     </figure>
                     <figure class="item">
-                        <img src="../static/images/jacoria.jpg">
+                        <img src="{% static 'images/jacoria.jpg' %}">
                         <figcaption class="caption">Jacoria Dingle</figcaption>
                     </figure>
                     <figure class="item">
-                        <img src="../static/images/kenneth.jpg">
+                        <img src="{% static 'images/kenneth.jpg' %}">
                         <figcaption class="caption">Kenneth Miguel Ulloa Alvarado</figcaption>
                     </figure>
                     <div class="twopics">
                         <figure class="item">
-                            <img src="../static/images/alex.jpg">
+                            <img src="{% static 'images/alex.jpg' %}">
                             <figcaption class="caption">Alexandria Bluitt</figcaption>
                         </figure>
                         <figure class="item">
-                            <img src="../static/images/joaquin.jpg">
+                            <img src="{% static 'images/joaquin.jpg' %}">
                             <figcaption class="caption">Joaquin Quilling</figcaption>
                         </figure>
                     </div>
@@ -89,11 +91,11 @@
         <div class="footer">
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Resources</li>
-                    <li>Find Communities</li>
-                    <li>Get Involved</li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'resources' %}">Resources</a></li>
+                    <li><a href="{% url 'community' %}">Find Communities</a></li>
+                    <li><a href="{% url 'getinvolved' %}">Get Involved</a></li>
                 </ul>
             </nav>
         </div>
